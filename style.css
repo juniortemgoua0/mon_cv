@@ -114,6 +114,9 @@
 
 .up_left_side{
     grid-area: up_left_size;
+    border-bottom-right-radius:0px ; 
+    border-bottom-left-radius:0px ;
+
 }
 
 .user_profil{
@@ -279,16 +282,27 @@
     justify-content: space-around;
 }
 
-.experience_indication div {
+/* .experience_indication h5 {
     display: flex;
     flex-direction: column;
-}
+} */
 
-.experience_indication div span.active{
+.active{
     height: 3px;
     width: 100%;
     background-color: red;
     margin-top: var(--global-margin);
+}
+
+.bar_active{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 2px ;
+}
+
+.bar_active span{
+    flex: 1;
 }
 
 
@@ -301,6 +315,8 @@
     background-color: white;
     padding: var(--global-padding);
     margin-top: 0px;
+    border-top-right-radius:0px ; 
+    border-top-left-radius:0px ;
 }
 
 .d_personnal{
@@ -502,6 +518,8 @@ hr{
 
     .up_left_side{
         order: 1;
+        border-bottom-right-radius:5px ; 
+         border-bottom-left-radius:5px ;
     }
 
     .right_side{
@@ -512,6 +530,8 @@ hr{
     .down_left_side{
         order: 3;
         margin-top: var(--global-margin);
+        border-top-right-radius:5px ; 
+    border-top-left-radius:5px ;
     }
     
 }
