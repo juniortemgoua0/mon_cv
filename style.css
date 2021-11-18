@@ -196,7 +196,7 @@
 }
 
 .divider{
-    height: 30px;
+    height: 25px;
     width: 2px;
     background-color: #9c9c9c;
 }
@@ -206,7 +206,7 @@
     font-size: 17px;
     width: 50%;
     outline: none;
-    flex: 1;
+    flex: .9;
     flex-wrap: wrap;
 }
 
