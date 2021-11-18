@@ -184,6 +184,7 @@
     justify-content: space-between;
     padding: calc(var(--global-margin));
     align-items: center;
+    flex-wrap: wrap;
     background-color: white;
     position: absolute;
     border-radius: 5px;
@@ -193,6 +194,13 @@
     left: 5%;
     right: 5%;
     top: 3%;
+}
+
+.icon_nav_bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70px;
 }
 
 .divider{
@@ -206,8 +214,10 @@
     font-size: 17px;
     width: 50%;
     outline: none;
-    flex: .9;
-    flex-wrap: wrap;
+    height: 25px;
+    /* flex: .9; */
+    width: 220px;
+   
 }
 
 .cover{
