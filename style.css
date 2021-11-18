@@ -484,11 +484,13 @@ hr{
 
 .interest_point{
     padding: calc(var(--global-padding));
-    margin-right: 10px;
+    margin-right: 5%;
+    width: 60%;
 }
 
 .language{
     padding: calc(var(--global-padding));
+    width: 35%;
 }
 
 .language_check{
