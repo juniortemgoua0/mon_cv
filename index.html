@@ -5,47 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
-    <title>CV</title>
+    <script src="app.js" defer></script>
 </head>
 
 <body>
     <div class="container">
 
-
-
         <!--------------------------          SECTION UP_LEFT_SIDE  ------------------------>
-
-
 
         <section class="up_left_side card">
 
             <div class="user_profil">
                 <div class="cover"></div>
 
-                <div class="nav_bar">
+                <div class="nav_bar" id="navBar">
 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list menu_open" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
                     </svg>
 
-                    <input type="text" name="" placeholder="Besoin d'un chef de projet ? " id="" class="search">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list menu_close" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg> -->
 
-                    <div class="icon_nav_bar">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path
-                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                    </svg>
-
-                        <span class="divider"></span>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg croix_close" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
                             d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
                         <path fill-rule="evenodd"
                             d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
-                    </svg>
+                    </svg> -->
+
+                    <input type="text" name="" placeholder="Besoin d'un chef de projet ? " id="" class="search">
+
+                    <div class="icon_nav_bar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search " viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+
+                        <span class="divider"></span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg close_icon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
+                            <path fill-rule="evenodd"
+                                d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
+                        </svg>
 
                     </div>
 
@@ -89,7 +98,7 @@
                         </svg>
                         <div class="details">
                             <p>Resident a logbessou </p>
-                            <p>Douala - Caameroun</p>
+                            <p>Douala - Cameroun</p>
                             <p>Map: <span class="p_lite_gray"> 4.053276, 9.765047</span>
                             </p>
                             <hr>
@@ -194,6 +203,7 @@
                     </div>
                 </div>
             </div>
+
 
             <div class="d_personnal">
                 <span class="check"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
@@ -317,7 +327,8 @@
                     <div class="professional_experience_scroll">
 
                         <div class="profession">
-                            <p class="title"> Chef des projets technologiques - <span class="location">@Ets. M DE M</span>
+                            <p class="title"> Chef des projets technologiques - <span class="location">@Ets. M DE
+                                    M</span>
                             </p>
                             <p class="date">De juillet 2019 a ce jour - http://mdm.cm</p>
                             <p class="subtitle"> Chef du projet annuaire-universel.cm de l'ART;</p>
@@ -332,7 +343,8 @@
                         </div>
 
                         <div class="profession">
-                            <p class="title"> Enseignant - <span class="location">@Institut Universitaire de la cote</span>
+                            <p class="title"> Enseignant - <span class="location">@Institut Universitaire de la
+                                    cote</span>
                             </p>
                             <p class="date">De Octobre 2011 a ce jour - http://istdi.net</p>
                             <p class="subtitle"> "Analyse. UML & MERISE"; "BD/SQL. ORACLE & MySQL";"Dev. iOS & Android"; "BI & BIG Data Talend DI & Hadoop". 1<sup>ere</sup>, 2<sup>eme</sup> et 4<sup>eme</sup> annee
@@ -348,7 +360,8 @@
                         </div>
 
                         <div class="profession">
-                            <p class="title"> Enseignant - <span class="location">@Institut Universitaire de la cote</span>
+                            <p class="title"> Enseignant - <span class="location">@Institut Universitaire de la
+                                    cote</span>
                             </p>
                             <p class="date">De Octobre 2011 a ce jour - http://istdi.net</p>
                             <p class="subtitle"> "Analyse. UML & MERISE"; "BD/SQL. ORACLE & MySQL";"Dev. iOS & Android"; "BI & BIG Data Talend DI & Hadoop". 1<sup>ere</sup>, 2<sup>eme</sup> et 4<sup>eme</sup> annee
@@ -366,7 +379,8 @@
                         <div class="profession">
                             <p class="title"> Responsable commercial - <span class="location">@BAO Sarl</span></p>
                             <p class="date">De Decembre 2012 a Juin 2013 - http://bao-sarl.com</p>
-                            <p class="subtitle">Definition des strategies commerciales, Controle de qualite, suivi, ...</p>
+                            <p class="subtitle">Definition des strategies commerciales, Controle de qualite, suivi, ...
+                            </p>
                         </div>
                     </div>
 
@@ -440,14 +454,15 @@
                         <div class="profession">
                             <p class="title"> DIPET 2 Electronique - <span class="location">@ENSET de Douala</span></p>
                             <p class="date_cursus_role"> <span class="date">Aout 2016 - </span> &nbsp; <span class="cursus_role">Gestion d'eclairage d'une
-                                maison(Android + Arduino)</span> </p>
+                                    maison(Android + Arduino)</span> </p>
                             <hr>
                         </div>
 
                         <div class="profession">
-                            <p class="title"> Oracle Certified Associate - <span class="location">@Kentnix Sarl</span></p>
+                            <p class="title"> Oracle Certified Associate - <span class="location">@Kentnix Sarl</span>
+                            </p>
                             <p class="date_cursus_role"> <span class="date">Mars 2009 -</span> &nbsp; <span class="cursus_role">Oracle Database 11g
-                                Administration</span> </p>
+                                    Administration</span> </p>
                             <hr>
                         </div>
 
@@ -459,75 +474,75 @@
 
                         <div class="profession">
                             <p class="title"> Licence professionnelle - <span class="location">@Douala Institute of
-                                Tech.</span></p>
+                                    Tech.</span></p>
                             <p class="date_cursus_role"> <span class="date"> Octobre 2008 - </span> &nbsp; <span class="cursus_role">Telecommunication &
-                                Reseaux</span> </p>
+                                    Reseaux</span> </p>
                             <hr>
                         </div>
 
                         <div class="profession">
                             <p class="title"> Licence professionnelle - <span class="location">@Douala Institute of
-                                Tech.</span></p>
+                                    Tech.</span></p>
                             <p class="date_cursus_role"> <span class="date"> Octobre 2008 - </span> &nbsp; <span class="cursus_role">Telecommunication &
-                                Reseaux</span> </p>
-                            <hr>
-                        </div>
-
-
-                        <div class="profession">
-                            <p class="title"> Licence professionnelle - <span class="location">@Douala Institute of
-                                Tech.</span></p>
-                            <p class="date_cursus_role"> <span class="date"> Octobre 2008 - </span> &nbsp; <span class="cursus_role">Telecommunication &
-                                Reseaux</span> </p>
-                            <hr>
-                        </div>
-
-                        <div class="profession">
-                            <p class="title"> Licence professionnelle - <span class="location">@Douala Institute of
-                                Tech.</span></p>
-                            <p class="date_cursus_role"> <span class="date"> Octobre 2008 - </span> &nbsp; <span class="cursus_role">Telecommunication &
-                                Reseaux</span> </p>
+                                    Reseaux</span> </p>
                             <hr>
                         </div>
 
 
                         <div class="profession">
                             <p class="title"> Licence professionnelle - <span class="location">@Douala Institute of
-                                Tech.</span></p>
+                                    Tech.</span></p>
                             <p class="date_cursus_role"> <span class="date"> Octobre 2008 - </span> &nbsp; <span class="cursus_role">Telecommunication &
-                                Reseaux</span> </p>
+                                    Reseaux</span> </p>
                             <hr>
                         </div>
 
                         <div class="profession">
                             <p class="title"> Licence professionnelle - <span class="location">@Douala Institute of
-                                Tech.</span></p>
+                                    Tech.</span></p>
                             <p class="date_cursus_role"> <span class="date"> Octobre 2008 - </span> &nbsp; <span class="cursus_role">Telecommunication &
-                                Reseaux</span> </p>
+                                    Reseaux</span> </p>
                             <hr>
                         </div>
 
 
                         <div class="profession">
                             <p class="title"> Licence professionnelle - <span class="location">@Douala Institute of
-                                Tech.</span></p>
+                                    Tech.</span></p>
                             <p class="date_cursus_role"> <span class="date"> Octobre 2008 - </span> &nbsp; <span class="cursus_role">Telecommunication &
-                                Reseaux</span> </p>
+                                    Reseaux</span> </p>
                             <hr>
                         </div>
 
                         <div class="profession">
                             <p class="title"> Licence professionnelle - <span class="location">@Douala Institute of
-                                Tech.</span></p>
+                                    Tech.</span></p>
                             <p class="date_cursus_role"> <span class="date"> Octobre 2008 - </span> &nbsp; <span class="cursus_role">Telecommunication &
-                                Reseaux</span> </p>
+                                    Reseaux</span> </p>
+                            <hr>
+                        </div>
+
+
+                        <div class="profession">
+                            <p class="title"> Licence professionnelle - <span class="location">@Douala Institute of
+                                    Tech.</span></p>
+                            <p class="date_cursus_role"> <span class="date"> Octobre 2008 - </span> &nbsp; <span class="cursus_role">Telecommunication &
+                                    Reseaux</span> </p>
+                            <hr>
+                        </div>
+
+                        <div class="profession">
+                            <p class="title"> Licence professionnelle - <span class="location">@Douala Institute of
+                                    Tech.</span></p>
+                            <p class="date_cursus_role"> <span class="date"> Octobre 2008 - </span> &nbsp; <span class="cursus_role">Telecommunication &
+                                    Reseaux</span> </p>
                             <hr>
                         </div>
 
                         <div class="profession">
                             <p class="title"> DEC / BTS - <span class="location">@CCNB Dieppe - Canada.</span></p>
                             <p class="date_cursus_role"> <span class="date"> Septembre 2007 - </span> &nbsp; <span class="cursus_role"> Electrotechnique, mention
-                                BIEN(major de centre) </span> </p>
+                                    BIEN(major de centre) </span> </p>
                         </div>
                     </div>
 
