@@ -4,6 +4,8 @@ let menuClose = document.querySelector(".menu_close")
 
 let navBar = document.querySelector("#navBar")
 
+let divider = document.querySelector(".divider")
+
 let inputSearch = document.querySelector(".search")
 
 let closeIcon = document.querySelector(".close_icon")
@@ -18,14 +20,16 @@ menuOpen.addEventListener("click", () => {
     navBar.removeAttribute("class", "navBar")
     navBar.setAttribute("class", "wrap_nav_bar")
         // inputSearch.style.display = "block"
-    iconNavBar.style.display = "block"
+    iconNavBar.style.display = "flex"
+        // iconNavBar.style.width = "70px"
     menuOpen.style.display = "none"
     navBar.style.right = "5%"
-        // menuClose.style.display = "none"
-        // closeIcon.style.display = "block"
-        // } else if (navBar.getAttribute("class", "wrap_nav_bar")) {
-        // navBar.removeAttribute("class", "wrap_nav_bar")
-        // navBar.setAttribute("class", "nav_bar")
+
+    // menuClose.style.display = "none"
+    // closeIcon.style.display = "block"
+    // } else if (navBar.getAttribute("class", "wrap_nav_bar")) {
+    // navBar.removeAttribute("class", "wrap_nav_bar")
+    // navBar.setAttribute("class", "nav_bar")
     inputSearch.style.display = "block"
 
     // menuClose.style.display = "block"

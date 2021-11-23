@@ -6,12 +6,14 @@
     --global-padding: 20px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 * {
     margin: 0px;
     padding: 0px;
     text-decoration: none;
     box-sizing: border-box;
-    /* font-family: 'Times New Roman', Times , sans-serif; */
+    font-family: sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 p {
@@ -87,17 +89,20 @@ h2 {
 
 .btn_plus {
     padding: 15px;
-    width: 60px;
-    height: 60px;
+    width: 65px;
+    height: 65px;
     border-radius: 100%;
     background-color: #f32323;
     position: absolute;
-    top: -30px;
+    top: -32.5px;
     right: 30px;
     box-shadow: 0px 0px 5px #000;
     cursor: pointer;
     background-position: center;
     transition: background 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn_plus:hover {
@@ -108,17 +113,9 @@ h2 {
     background-color: #ff532f;
 }
 
-.btn_plus svg {
-    width: 20px;
-    height: 20px;
-    font-weight: bold;
-    font-size: 20px;
-    margin: auto;
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+.btn_plus span {
+    /* font-weight: bold; */
+    font-size: 27px;
 }
 
 .nav_bar {
@@ -215,6 +212,7 @@ h2 {
 
 .personnal_info_group p {
     font-weight: 600;
+    margin-bottom: var(--global-margin-b);
 }
 
 .personnal_info hr {
