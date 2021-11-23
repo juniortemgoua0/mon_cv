@@ -88,17 +88,15 @@ h2 {
 }
 
 .btn_plus {
-    padding: 15px;
     width: 65px;
     height: 65px;
-    border-radius: 100%;
-    background-color: #f32323;
+    border-radius: 50%;
+    background-color: #fa3e3e;
     position: absolute;
     top: -32.5px;
     right: 30px;
     box-shadow: 0px 0px 5px #000;
     cursor: pointer;
-    background-position: center;
     transition: background 0.2s;
     display: flex;
     justify-content: center;
@@ -133,7 +131,7 @@ h2 {
     left: 5%;
     right: 5%;
     top: 3%;
-    transition: all 0.9s;
+    transition: all 0.9s ease-out;
 }
 
 .wrap_nav_bar {
@@ -150,7 +148,7 @@ h2 {
     left: 5%;
     right: 5%;
     top: 3%;
-    transition: all 0.9s;
+    transition: all 0.9s ease-in;
 }
 
 .wrap_nav_bar .search {
@@ -363,7 +361,7 @@ h2 {
 
 .header {
     background-color: var(--primary-color);
-    padding: calc(var(--global-padding)) calc(var(--global-padding));
+    padding: calc(var(--global-padding)) calc(var(--global-padding)*1.5);
     display: flex;
     justify-content: space-between;
     /* flex-wrap: wrap; */
@@ -523,6 +521,11 @@ hr {
     font-size: 17px;
 }
 
+hr {
+    color: #dddddd;
+    /* background-color: #ff4f4f; */
+}
+
 @media screen and (max-width: 667px) {
     .container {
         display: flex;
@@ -564,6 +567,9 @@ hr {
     .professional_experience_main {
         padding: calc(var(--global-padding));
         padding-right: calc(var(--global-padding)*0.4);
+    }
+    .header {
+        padding: calc(var(--global-padding)) calc(var(--global-padding));
     }
 }
 

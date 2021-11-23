@@ -4,7 +4,7 @@ let menuClose = document.querySelector(".menu_close")
 
 let navBar = document.querySelector("#navBar")
 
-let divider = document.querySelector(".divider")
+// let divider = document.querySelector(".divider")
 
 let inputSearch = document.querySelector(".search")
 
