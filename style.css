@@ -575,6 +575,19 @@ hr {
     .header {
         padding: calc(var(--global-padding)) calc(var(--global-padding));
     }
+    .hobby{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .interest_point{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .language{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 500px) {
