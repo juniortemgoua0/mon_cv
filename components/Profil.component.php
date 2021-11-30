@@ -51,7 +51,6 @@
         <div class="user_name">
             <h2>TEMGOUA NGOUSSONG <br> Browdon Junior</h2>
             <p class="user_job">Architecte logiciel / Devops</p>
-            <p> bonjour </p>
         </div>
 
     </div>
