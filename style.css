@@ -382,6 +382,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .header_information svg {
@@ -393,7 +394,7 @@ h2 {
 }
 
 .header_info {
-    width: 310px;
+    width: 100%;
 }
 
 .professional_experience_main {
