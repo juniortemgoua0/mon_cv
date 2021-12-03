@@ -8,9 +8,8 @@ class Utils {
         $month = "" ;
 
         if($date == "ce jour"){
-
-          $month = $date;
-          return $month ;
+            
+          return $date ;
 
         }
         
@@ -56,9 +55,6 @@ class Utils {
             default : 
                 die("Invalid month");
                 break ;
-
-                
-      
             
         }
 

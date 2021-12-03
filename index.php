@@ -16,20 +16,20 @@ require "class/Skill.php" ;
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- ------------  css ------------- -->
-        <!-- <link rel="stylesheet" href="CSS/materialize.min.css">
-       <link rel="stylesheet" href="CSS/bootstrap.min.css"> -->
-       <link rel="stylesheet" href="icons-1.7.1/font/bootstrap-icons.css">
+        <!-- <link rel="stylesheet" href="CSS/materialize.min.css"> -->
+       <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="icons-1.7.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="CSS/style.css">
         <!-- <link rel="stylesheet" href="CSS/reset.css"> -->
 
 
         <!-- ---------- JAVASCRIPT       -------- -->
         <script src="JS/materialize.min.js" defer></script>
-        <script src="JS/bootstrap.min.js" defer></script>
-        <script src="JS/jquery-3.5.1.min.js" defer></script>
-        <script src="JS/app.js" defer></script>
-       
-       
+        <script src="JS/jquery-3.5.1.min.js" ></script>
+        <script src="JS/bootstrap.min.js" ></script>
+        <script src="JS/app.js" ></script>
+
+
 </head>
 
 <body>
@@ -40,7 +40,7 @@ require "class/Skill.php" ;
                 <section class="up_left_side card">
 
                         <?php require "components/Profil.component.php"; ?>
-                        
+
                 </section>
 
                 <!--------------------------          SECTION DOWN_LEFT_SIDE  ------------------------>
@@ -69,6 +69,8 @@ require "class/Skill.php" ;
 
                 </section>
         </div>
+
+  
 
 </body>
 

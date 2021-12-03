@@ -20,6 +20,10 @@ $(document).ready(function() {
         e.currentTarget.parentElement.classList.toggle("open")
     })
 
+    // $(".d_personnal").click((e) => {
+
+    //     alert("bonjour")
+    // })
 
 });
 
