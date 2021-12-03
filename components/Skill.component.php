@@ -19,7 +19,7 @@ $skill = array(new Skill("Developpement front-end", "HTML5, SASS, VueJS, Angular
         </svg></span>
     <div class="details">
         <div class="skill">
-            <h3><?=$sk->getTitle()?></h3>
+            <p class="skill_name"><?=$sk->getTitle()?></p>
             <span class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-star-fill" viewBox="0 0 16 16">
                     <path

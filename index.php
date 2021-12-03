@@ -15,8 +15,21 @@ require "class/Skill.php" ;
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="style.css">
-        <script src="app.js" defer></script>
+        <!-- ------------  css ------------- -->
+        <!-- <link rel="stylesheet" href="CSS/materialize.min.css">
+       <link rel="stylesheet" href="CSS/bootstrap.min.css"> -->
+       <link rel="stylesheet" href="icons-1.7.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="CSS/style.css">
+        <!-- <link rel="stylesheet" href="CSS/reset.css"> -->
+
+
+        <!-- ---------- JAVASCRIPT       -------- -->
+        <script src="JS/materialize.min.js" defer></script>
+        <script src="JS/bootstrap.min.js" defer></script>
+        <script src="JS/jquery-3.5.1.min.js" defer></script>
+        <script src="JS/app.js" defer></script>
+       
+       
 </head>
 
 <body>
@@ -28,8 +41,6 @@ require "class/Skill.php" ;
 
                         <?php require "components/Profil.component.php"; ?>
                         
-                        <?php require "components/PersonnalInfo.component.php"; ?>
-
                 </section>
 
                 <!--------------------------          SECTION DOWN_LEFT_SIDE  ------------------------>

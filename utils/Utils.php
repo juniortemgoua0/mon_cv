@@ -99,12 +99,8 @@ class Utils {
        {
         
          $max = max($arrayOfInterval) ;
-
-
          
          $index = array_search($max , $arrayOfInterval) ;
-     
-         
      
          $dateOfMaxInterval = $arrayOfDate[$index] ; 
      
@@ -151,7 +147,7 @@ class Utils {
      
             }else{
 
-                
+
      
               $timeResult += $arrayOfInterval[$i] ;
             //   echo "bonsoir" ;

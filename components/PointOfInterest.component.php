@@ -1,3 +1,9 @@
+
+<?php
+$array_diverti=array( "img/photo_7.jpg","img/photo_9.jpg","img/photo1.jpg",
+     "img/photo_8.jpg","img/photo4.jpg","img/photo_5.jpg","img/photo_6.jpg");
+?>
+
 <div class="interest_point card">
     <h3>Points d'interets</h3>
     <p class="header_subtitle"> Simple passe temps pour se faire un peu plaisir </p>
