@@ -9,18 +9,6 @@
                 d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
         </svg>
 
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list menu_close" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
-                    </svg> -->
-
-        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg croix_close" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" />
-                        <path fill-rule="evenodd"
-                            d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" />
-                    </svg> -->
-
         <input type="text" name="" placeholder="Besoin d'un chef de projet ? " id="" class="search">
 
         <div class="icon_nav_bar">
@@ -46,12 +34,11 @@
 </div>
 
 <div class="personnal_info">
-    <!-- <span class="btn_plus"><i class="bi bi-plus-lg"></i></span> -->
 
         <menu class="" >
             <a href="#" class="action"> <i class="bi bi-pencil-fill"></i> </a>
             <a href="#" class="action"> <i class="bi bi-save-fill"></i> </a>
-            <a href="#" class="action"> <i class="bi bi-share-fill"></i> </a>
+            <a href="#" class="action btn_share" data-bs-toggle="modal" data-bs-target="#exampleModalshare_cv"> <i class="bi bi-share-fill"></i> </a>
             <a href="#" class="trigger"> <i class="bi bi-plus-lg"></i> </a>
         </menu>
 
@@ -120,3 +107,42 @@
     </div>
 
 </div>
+
+<?php
+
+echo '<div class="modal fade" id="exampleModalshare_cv"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog  modal-dialog-scrollable">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 class="modal-title" id="exampleModalLabel">Envoyer votre CV</h3>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body"> 
+    <div > <p class="skill_name"> Saisissez une ou plusieurs adresses email valide</p> </div>
+    <div class="chips chips-placeholder"></div>
+    <div > <p class="skill_name"> Objet : </p> </div>
+    <div class="input-field col s12">
+          <input id="object_mail" type="text" class="validate" placeholder="Entrer l\'objet">
+    </div>
+    <div > <p class="skill_name"> Veuillez selectionnez le format d\'envoi </p> </div>
+    <div class="row">
+        <div class="col-sm-6 "><img class="img_to_send_mail" src="../img/icon_txt.png" alt=""></div>
+        <div class="col-sm-6 "><img class="img_to_send_mail" src="../img/pdf.png" alt=""></div>
+     </div>
+
+  </div>
+
+  <div class="modal-footer">
+  <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill">Close</i></button>
+  <button type="button" class="btn btn-success"><i class="bi bi-send-fill">Envoyer</i></button>
+
+  </div> 
+  </div>
+</div>
+</div>
+
+
+  ' ;
+
+?>
+

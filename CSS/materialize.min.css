@@ -2476,10 +2476,11 @@ nav,
 }
 
 .z-depth-5,
-.modal {
+
+/* .modal {
     -webkit-box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
     box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2)
-}
+} */
 
 .hoverable {
     -webkit-transition: -webkit-box-shadow .25s;
@@ -5636,7 +5637,8 @@ body.keyboard-focused .dropdown-content li:focus {
     z-index: -1
 }
 
-.modal {
+
+/* .modal {
     display: none;
     position: fixed;
     left: 0;
@@ -5653,14 +5655,16 @@ body.keyboard-focused .dropdown-content li:focus {
 
 .modal:focus {
     outline: none
-}
+} */
 
 @media only screen and (max-width: 992px) {
-    .modal {
+    /* .modal {
         width: 80%
-    }
+    } */
 }
 
+
+/* 
 .modal h1,
 .modal h2,
 .modal h3,
@@ -5733,7 +5737,7 @@ body.keyboard-focused .dropdown-content li:focus {
     max-height: 45%;
     border-radius: 0;
     will-change: bottom, opacity
-}
+} */
 
 .collapsible {
     border-top: 1px solid #ddd;

@@ -1,16 +1,16 @@
 $(document).ready(function() {
 
-    let $scroll = ($(".down_left_side").height() + $(".up_left_side").height() - ($(".hobby").height() + $(".header").height() * 2 + 220)) / 2;
+    // let $scroll = ($(".down_left_side").height() + $(".up_left_side").height() - ($(".hobby").height() + $(".header").height() * 2 + 220)) / 2;
 
-    $(".professional_experience_scroll").css("height", $scroll)
-    $(window).resize(function() {
+    // $(".professional_experience_scroll").css("height", $scroll)
+    // $(window).resize(function() {
 
 
-        $scroll = ($(".down_left_side").height() + $(".up_left_side").height() - ($(".hobby").height() + $(".header").height() * 2 + 220)) / 2;
+    //     $scroll = ($(".down_left_side").height() + $(".up_left_side").height() - ($(".hobby").height() + $(".header").height() * 2 + 220)) / 2;
 
-        console.log($scroll)
-        $(".professional_experience_scroll").css("height", $scroll)
-    })
+    //     console.log($scroll)
+    //     $(".professional_experience_scroll").css("height", $scroll)
+    // })
 
 
 
@@ -20,10 +20,16 @@ $(document).ready(function() {
         e.currentTarget.parentElement.classList.toggle("open")
     })
 
-    // $(".d_personnal").click((e) => {
+    $('.chips-placeholder').chips({
+        placeholder: 'yo@gmail.com ',
+        secondaryPlaceholder: '+Email',
+    });
 
-    //     alert("bonjour")
-    // })
+    // $(".btn_share").click((e) => {
+
+
+    // });
+
 
 });
 

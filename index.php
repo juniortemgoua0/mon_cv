@@ -16,7 +16,7 @@ require "class/Skill.php" ;
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- ------------  css ------------- -->
-        <!-- <link rel="stylesheet" href="CSS/materialize.min.css"> -->
+        <link rel="stylesheet" href="CSS/materialize.min.css">
        <link rel="stylesheet" href="CSS/bootstrap.min.css">
         <link rel="stylesheet" href="icons-1.7.1/font/bootstrap-icons.css">
         <link rel="stylesheet" href="CSS/style.css">
