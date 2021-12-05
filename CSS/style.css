@@ -32,6 +32,7 @@ h2 {
 .container {
     width: 80%;
     margin: auto;
+    position: relative;
     margin-top: var(--global-margin);
     margin-bottom: calc(var(--global-padding)*0.5);
     display: grid;
@@ -658,14 +659,52 @@ hr {
 }
 
 .img_to_send_mail {
-    width: 90%;
-    height: 90%;
+    width: 60%;
+    height: 80%;
     transition: all 300ms ease-in-out;
 }
 
 .img_to_send_mail:hover {
     box-shadow: 0px 0px 10px var(--primary-color);
     border-radius: 5px;
+}
+
+.load_none,
+.alert_none {
+    display: none;
+}
+
+.load_page {
+    position: absolute;
+    background-color: white;
+    opacity: 0.5;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load_page_content {
+    display: flex;
+    place-content: center;
+}
+
+.load_page_content p {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.alert_send_mail {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    right: 5%;
+    z-index: 15;
 }
 
 @media screen and (max-width: 667px) {

@@ -37,7 +37,7 @@
 
         <menu class="" >
             <a href="#" class="action"> <i class="bi bi-pencil-fill"></i> </a>
-            <a href="#" class="action"> <i class="bi bi-save-fill"></i> </a>
+            <a href="../app/downloadPdf.php" class="action btn_download" > <i class="bi bi-save-fill"></i> </a>
             <a href="#" class="action btn_share" data-bs-toggle="modal" data-bs-target="#exampleModalshare_cv"> <i class="bi bi-share-fill"></i> </a>
             <a href="#" class="trigger"> <i class="bi bi-plus-lg"></i> </a>
         </menu>
@@ -110,11 +110,22 @@
 
 <?php
 
-echo '<div class="modal fade" id="exampleModalshare_cv"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+echo '<div class="modal fade" id="exampleModalshare_cv" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 <div class="modal-dialog  modal-dialog-scrollable">
   <div class="modal-content">
+  <div class="load_none " >
+                        <div class="load_page_content">
+                                <div class="spinner-border" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                </div>
+                        </div>
+                </div>
+                <div class="alert alert_none alert_smtp" role="alert">
+ 
+</div>
+
     <div class="modal-header">
-      <h3 class="modal-title" id="exampleModalLabel">Envoyer votre CV</h3>
+      <h3 class="modal-title" id="exampleModalLabel">Partager votre CV</h3>
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body"> 
@@ -122,19 +133,25 @@ echo '<div class="modal fade" id="exampleModalshare_cv"  tabindex="-1" aria-labe
     <div class="chips chips-placeholder"></div>
     <div > <p class="skill_name"> Objet : </p> </div>
     <div class="input-field col s12">
-          <input id="object_mail" type="text" class="validate" placeholder="Entrer l\'objet">
+          <input id="object_mail" type="text" class="object_mail" placeholder="Entrer l\'objet">
     </div>
     <div > <p class="skill_name"> Veuillez selectionnez le format d\'envoi </p> </div>
+    <div class="d-flex justify-content-center align-items-center" style="width:100%;">
     <div class="row">
-        <div class="col-sm-6 "><img class="img_to_send_mail" src="../img/icon_txt.png" alt=""></div>
-        <div class="col-sm-6 "><img class="img_to_send_mail" src="../img/pdf.png" alt=""></div>
+    <div class="col-sm-6 d-flex justify-content-center align-items-center"><img class="img_to_send_mail" src="../img/icon_txt.png" alt=""></div>
+    <div class="col-sm-6 d-flex justify-content-center align-items-center"><img class="img_to_send_mail" src="../img/pdf.png" alt=""></div>
+     </div>
      </div>
 
+    
   </div>
 
   <div class="modal-footer">
-  <button type="button" class="btn btn-danger" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill">Close</i></button>
-  <button type="button" class="btn btn-success"><i class="bi bi-send-fill">Envoyer</i></button>
+  <button type="button" class="btn btn-danger waves-effect waves-light red lighten-1" data-bs-dismiss="modal">Annuler
+  <i class="material-icons left">cancel</i></button>
+  <button class="btn waves-effect waves-light send_mail" style="background-color:#1376ba;" type="submit" name="action">Envoyer
+  <i class="material-icons right">send</i>
+</button>
 
   </div> 
   </div>

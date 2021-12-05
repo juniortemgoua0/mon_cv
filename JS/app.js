@@ -20,16 +20,74 @@ $(document).ready(function() {
         e.currentTarget.parentElement.classList.toggle("open")
     })
 
-    $('.chips-placeholder').chips({
+    var elems = document.querySelectorAll('.chips');
+    var options = {
         placeholder: 'yo@gmail.com ',
         secondaryPlaceholder: '+Email',
+        data: [],
+        limit: Infinity,
+        onChipAdd: (data) => {
+
+        },
+        minLeingth: 1
+    };
+
+    var instances = M.Chips.init(elems, options);
+
+
+
+    $(".send_mail").click((e) => {
+        var recipients = instances[0].chipsData
+        var object = $(".object_mail").val();
+
+        $.ajax({
+                method: "POST",
+                url: "../app/sendMail.php",
+                data: {
+                    "recipients": recipients,
+                    "object": object
+                },
+                beforeSend: function(xhr) {
+                    $(".load_none").addClass("load_page");
+                    // alert('bonjour');
+                }
+            })
+            .done(function(data) {
+                $(".load_none").removeClass("load_page")
+                console.log(data)
+                if (data.includes("Invalid address"))
+                    verifyData("alert-danger", "Adresse email invalide")
+                else if (data.includes("Message has been sent"))
+                    verifyData("alert-success", "Votre email a ete envoyer avec succes !")
+                else if (data.includes("Failed to connect to server"))
+                    verifyData("alert-danger", "Erreur de conexion au server ! Verifier votre connexion")
+                else if (data.includes("Undefined array key"))
+                    verifyData("alert-danger", "Veuillez entrer au moins une adresse email")
+
+            });
+
+
     });
 
-    // $(".btn_share").click((e) => {
+    function verifyData(alert, message) {
+        $(".alert_smtp").addClass(alert).html(message)
+        $(".alert_smtp").addClass("alert_send_mail ").fadeIn({
+            "duration": 1000,
+            "queue": true,
+            "complete": function() {
+                window.setTimeout(() => {
+                    $(".alert_smtp").slideUp(700)
+                }, 3000)
 
+            }
+        })
+        if (alert != "alert-danger")
+            $(".alert_smtp").removeClass("alert-danger")
+        else
+            $(".alert_smtp").removeClass("alert-success")
+        $(".chips").focus()
 
-    // });
-
+    }
 
 });
 
