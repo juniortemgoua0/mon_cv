@@ -89,6 +89,16 @@ $(document).ready(function() {
 
     }
 
+    $(".btn_edit").click((e) => {
+        $(".container").toggleClass("editable")
+        $("#editable_btn").addClass("editable_btn")
+    })
+
+    $(".cancelable_btn").click((e) => {
+        $(".container").toggleClass("editable")
+        $("#editable_btn").removeClass("editable_btn")
+    })
+
 });
 
 let menuOpen = document.querySelector(".menu_open");

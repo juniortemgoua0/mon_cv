@@ -1,4 +1,6 @@
 <div class=" language card">
+    <div class="cover_editable_btn"></div>
+    <a href="#" class="editable_btn"><i class="bi bi-pencil-fill"></i> </a>
     <h3>Langue</h3>
     <p class="header_subtitle"> Pratiquees en entreprise </p>
     <div class="language_check">

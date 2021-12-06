@@ -102,6 +102,8 @@ class Experience  {
 $timeOfWork = Utils::getTimeOfWork($arrayOfInterval ,$arrayOfDate) ;
         echo '
         <div class="professional_experience card">
+        <div class="cover_editable_btn"></div>
+                <a href="#" class="editable_btn"><i class="bi bi-pencil-fill"></i> </a>
         <div class="header">
             <div class="header_information">
                 <img src="img/batiment.png" height="40" width="40" alt="">

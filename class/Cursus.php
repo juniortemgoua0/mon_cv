@@ -62,7 +62,8 @@ class Cursus  {
     public static function getComponent(array $arrayOfCursus){
         echo '
         <div class="cursus card">
-
+        <div class="cover_editable_btn"></div>
+        <a href="#" class="editable_btn"><i class="bi bi-pencil-fill"></i> </a>
         <div class="header">
           <div class="header_information">
             <img src="img/casquette-noire-pour-etudiant-diplome.png" alt="">

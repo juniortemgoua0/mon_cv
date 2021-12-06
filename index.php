@@ -34,17 +34,23 @@ require "class/Skill.php" ;
 </head>
 
 <body>
-        <div class="container">
+        <div class="container ">
+        <a href="#" class="cancelable_btn"><i class="bi bi-plus-lg"></i> </i> </a>
 
                 <!--------------------------          SECTION UP_LEFT_SIDE  ------------------------>
 
                 <section class="up_left_side card">
+                <div class="cover_editable_btn"></div>
+                <a href="#" class="editable_btn"><i class="bi bi-pencil-fill"></i> </a>
                         <?php require "components/Profil.component.php"; ?>
                 </section>
 
                 <!--------------------------          SECTION DOWN_LEFT_SIDE  ------------------------>
 
                 <section class="down_left_side card">
+                <div class="cover_editable_btn"></div>
+                <a href="#" class="editable_btn"><i class="bi bi-pencil-fill"></i> </a>
+               
                         <?php require "components/Skill.component.php"; ?>
                 </section>
 
@@ -57,12 +63,10 @@ require "class/Skill.php" ;
                                 <?php require "components/Language.component.php"; ?>
                         </div>
                         <?php require "components/Cursus.component.php"; ?>
-                </section>    
+                </section>
+
+               
         </div>
-
-
-
-
 
 </body>
 

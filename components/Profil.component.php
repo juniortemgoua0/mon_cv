@@ -1,3 +1,4 @@
+
 <div class="user_profil">
     <div class="cover"></div>
 
@@ -36,7 +37,7 @@
 <div class="personnal_info">
 
         <menu class="" >
-            <a href="#" class="action"> <i class="bi bi-pencil-fill"></i> </a>
+            <a href="#" class="action"> <i class="bi bi-pencil-fill btn_edit"></i> </a>
             <a href="../app/downloadPdf.php" class="action btn_download" > <i class="bi bi-save-fill"></i> </a>
             <a href="#" class="action btn_share" data-bs-toggle="modal" data-bs-target="#exampleModalshare_cv"> <i class="bi bi-share-fill"></i> </a>
             <a href="#" class="trigger"> <i class="bi bi-plus-lg"></i> </a>
@@ -107,6 +108,7 @@
     </div>
 
 </div>
+
 
 <?php
 

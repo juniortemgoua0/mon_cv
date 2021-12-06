@@ -4,6 +4,7 @@
     --global-margin: 15px;
     --global-margin-b: 10px;
     --global-padding: 20px;
+    --edit-size: 4rem;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
@@ -14,6 +15,106 @@
     box-sizing: border-box;
     font-family: sans-serif;
     /* font-family: 'Roboto', sans-serif; */
+}
+
+.editable .down_left_side,
+.up_left_side,
+.professional_experience,
+.interest_point,
+.language,
+.curcus {
+    position: relative;
+    transition: all 250ms ease-in-out;
+}
+
+.editable .cover_editable_btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    opacity: 0.4;
+    z-index: 10;
+    transition: all 250ms ease-in-out;
+}
+
+.editable .editable_btn {
+    display: block;
+    position: absolute;
+    font-size: var(--edit-size);
+    background-color: #7008d1;
+    width: calc(1.5*var(--edit-size));
+    height: calc(1.5*var(--edit-size));
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px #000;
+    top: calc( 50% - var(--edit-size)*1.5/2);
+    left: calc( 50% - var(--edit-size)*1.5/2);
+    z-index: 15;
+    opacity: 0.9;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 250ms ease-in-out;
+}
+
+.editable_btn {
+    display: none;
+}
+
+.editable .editable_btn i,
+.editable .cancelable_btn i {
+    color: white;
+    /* transform: rotate(-45deg); */
+    animation: .7s infinite alternate pivote_pencil;
+    -webkit-animation: .7s infinite alternate pivote_pencil;
+    transition: all 250ms ease-in-out;
+}
+
+.editable .cancelable_btn {
+    position: absolute;
+    font-size: var(--edit-size);
+    width: calc(1.5*var(--edit-size));
+    height: calc(1.5*var(--edit-size));
+    border-radius: 100%;
+    background-color: #fa3e3e;
+    top: 5%;
+    left: calc( 42% - var(--edit-size)*1.5/2);
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 250ms ease-in-out;
+}
+
+@keyframes pivote_pencil {
+    0% {
+        transform: rotate(-45deg);
+        transform-origin: 1 10px;
+    }
+    50% {
+        transform: rotate(45deg);
+        transform-origin: 1 10px;
+    }
+    100% {
+        transform: rotate(-90deg);
+        transform-origin: 1 10px;
+    }
+}
+
+@-webkit-keyframes pivote_pencil {
+    0% {
+        transform: rotate(-45deg);
+    }
+    50% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
 }
 
 p {
@@ -658,6 +759,12 @@ hr {
     /* background-color: #ff4f4f; */
 }
 
+
+/*
+*Cette partie concerne la conciguration de style appliquer apres le click sur l'un des menu 
+*apres le plus 
+*/
+
 .img_to_send_mail {
     width: 60%;
     height: 80%;
@@ -706,6 +813,11 @@ hr {
     right: 5%;
     z-index: 15;
 }
+
+
+/*
+*                 MEDIA QUERY
+**/
 
 @media screen and (max-width: 667px) {
     .container {
