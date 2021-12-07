@@ -1,18 +1,10 @@
 <?php 
-
 class Cursus  {
 
-    private $diplome ;
-    private $ecoleObtention ;
-    private $dateObtention ;
-    private $specialisation ;
 
-    public function __construct(string $diplome  , string $ecoleObtention , string $dateObtention , string $specialisation)
+
+    public function __construct(private string $diplome  ,private string $ecoleObtention ,private string $dateObtention ,private string $specialisation)
     {
-        $this->diplome = $diplome ;
-        $this->ecoleObtention = $ecoleObtention ;
-        $this->dateObtention = $dateObtention ;
-        $this->specialisation = $specialisation ;
     }
     
     public function getDiplome(){
@@ -33,8 +25,8 @@ class Cursus  {
 
 
     /**
-     * @param $length {int} qui represente la taille du tableau comprenant tous les elements a charger 
-     * @param $lastValue {int} qui represente l'index de chaque element du tableau
+     * @param int $length  qui represente la taille du tableau comprenant tous les elements a charger 
+     * @param int $lastValue  qui represente l'index de chaque element du tableau
      * TODO : affiche chaque element en prenant le soin de ne pas mettre de <hr> sur le dernier element 
      */
     public function getOneElement(int $length , int $lastValue) 
@@ -56,7 +48,7 @@ class Cursus  {
     }
 
     /**
-     * @param $arraOfCursus {array} represente le tableau contenant la totalite des elements devant etre afficher
+     * @param array $arraOfCursus  represente le tableau contenant la totalite des elements devant etre afficher
      * par ce composant 
      *  */ 
     public static function getComponent(array $arrayOfCursus){

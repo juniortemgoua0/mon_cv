@@ -3,7 +3,7 @@
 $host = "localhost:8080" ;
 $dbname = "cv" ;
 $username = "root" ;
-$password = "Berbeto7" ;
+$password = "Berbato7" ;
 
 
 try{

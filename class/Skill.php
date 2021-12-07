@@ -2,17 +2,8 @@
 
 class  Skill {
 
-    private int $idOfSkill ;
-    private string $title ;
-    private  $allSkill  ;
-    private $level;
-
-    public function __construct(int $idOfSkill , string $title , $allSkill , int $level)
+    public function __construct(private int $idOfSkill ,private string $title ,private $allSkill ,private int $level)
     {
-        $this->idOfSkill = $idOfSkill ;
-        $this->title = $title ;
-        $this->allSkill = $allSkill ;
-        $this->level = $level ;
     }
 
     public function getIdOfSkill() : int

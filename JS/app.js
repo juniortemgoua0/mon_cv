@@ -63,7 +63,6 @@ $(document).ready(function() {
                     verifyData("alert-danger", "Erreur de conexion au server ! Verifier votre connexion")
                 else if (data.includes("Undefined array key"))
                     verifyData("alert-danger", "Veuillez entrer au moins une adresse email")
-
             });
 
 
