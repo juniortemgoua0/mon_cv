@@ -1,4 +1,3 @@
-
 <div class="user_profil">
     <div class="cover"></div>
 
@@ -36,12 +35,13 @@
 
 <div class="personnal_info">
 
-        <menu class="" >
-            <a href="#" class="action"> <i class="bi bi-pencil-fill btn_edit"></i> </a>
-            <a href="../app/downloadPdf.php" class="action btn_download" > <i class="bi bi-save-fill"></i> </a>
-            <a href="#" class="action btn_share" data-bs-toggle="modal" data-bs-target="#exampleModalshare_cv"> <i class="bi bi-share-fill"></i> </a>
-            <a href="#" class="trigger"> <i class="bi bi-plus-lg"></i> </a>
-        </menu>
+    <menu class="">
+        <a href="#" class="action"> <i class="bi bi-pencil-fill btn_edit"></i> </a>
+        <a href="../app/downloadPdf.php" class="action btn_download"> <i class="bi bi-save-fill"></i> </a>
+        <a href="#" class="action btn_share" id="btn_share" data-bs-toggle="modal"
+            data-bs-target="#exampleModalshare_cv"> <i class="bi bi-share-fill"></i> </a>
+        <a href="#" class="trigger"> <i class="bi bi-plus-lg"></i> </a>
+    </menu>
 
     <div class="personnal_info_group">
         <div class="personnal">
@@ -112,56 +112,102 @@
 
 <?php
 
-echo '<div class="modal fade" id="exampleModalshare_cv" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-<div class="modal-dialog  modal-dialog-scrollable">
-  <div class="modal-content">
-  <div class="load_none " >
-                        <div class="load_page_content">
-                                <div class="spinner-border" role="status">
-                                        <span class="visually-hidden">Loading...</span>
-                                </div>
-                        </div>
+echo '
+<div class="modal fade" id="exampleModalshare_cv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  modal-dialog-scrollable ">
+        <div class="modal-content">
+            <div class="load_none ">
+                <div class="load_page_content">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
                 </div>
-                <div class="alert alert_none alert_smtp" role="alert">
- 
-</div>
+            </div>
+            <div class="alert alert_none alert_smtp" role="alert"></div>
 
-    <div class="modal-header">
-      <h3 class="modal-title" id="exampleModalLabel">Partager votre CV</h3>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">Partager votre CV</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+                <div>
+                    <p class="skill_name"> Saisissez une ou plusieurs adresses email valide</p>
+                </div>
+                <div class="chips chips-placeholder"></div>
+                <div>
+                    <p class="skill_name"> Objet : </p>
+                </div>
+                <div class="input-field col s12">
+                    <input id="object_mail" type="text" class="form-control object_mail" placeholder="Entrer l\'objet">
+                </div>
+                <div>
+                    <p class="skill_name"> Veuillez selectionnez le format d\'envoi </p>
+                </div>
+                <div class="d-flex justify-content-center align-items-center" style="width:100%;">
+                    <div class="row">
+                        <div class="col-sm-6 d-flex justify-content-center align-items-center"><img
+                                class="img_to_send_mail" src="../img/icon_txt.png" alt=""></div>
+                        <div class="col-sm-6 d-flex justify-content-center align-items-center"><img
+                                class="img_to_send_mail" src="../img/pdf.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger waves-effect waves-light red lighten-1"
+                    data-bs-dismiss="modal">Annuler
+                    <i class="material-icons left">cancel</i></button>
+                <button class="btn waves-effect waves-light send_mail" style="background-color:#1376ba;" type="submit"
+                    name="action">Envoyer
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+        </div>
     </div>
-    <div class="modal-body"> 
-    <div > <p class="skill_name"> Saisissez une ou plusieurs adresses email valide</p> </div>
-    <div class="chips chips-placeholder"></div>
-    <div > <p class="skill_name"> Objet : </p> </div>
-    <div class="input-field col s12">
-          <input id="object_mail" type="text" class="object_mail" placeholder="Entrer l\'objet">
-    </div>
-    <div > <p class="skill_name"> Veuillez selectionnez le format d\'envoi </p> </div>
-    <div class="d-flex justify-content-center align-items-center" style="width:100%;">
-    <div class="row">
-    <div class="col-sm-6 d-flex justify-content-center align-items-center"><img class="img_to_send_mail" src="../img/icon_txt.png" alt=""></div>
-    <div class="col-sm-6 d-flex justify-content-center align-items-center"><img class="img_to_send_mail" src="../img/pdf.png" alt=""></div>
-     </div>
-     </div>
-
-    
-  </div>
-
-  <div class="modal-footer">
-  <button type="button" class="btn btn-danger waves-effect waves-light red lighten-1" data-bs-dismiss="modal">Annuler
-  <i class="material-icons left">cancel</i></button>
-  <button class="btn waves-effect waves-light send_mail" style="background-color:#1376ba;" type="submit" name="action">Envoyer
-  <i class="material-icons right">send</i>
-</button>
-
-  </div> 
-  </div>
 </div>
-</div>
-
 
   ' ;
 
 ?>
+
+<!-- Button trigger modal -->
+<button type="button" hidden id="identify" class="btn btn-primary" data-bs-toggle="modal"
+    data-bs-target="#exampleModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title skill_name" id="exampleModalLabel">CONNEXION A VOTRE COMPTE</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                    <div class="col-12">
+                        <div class="form-group">
+                            <p for="username" class="form-label">Nom d'utilisateur</p>
+                            <input type="text" name="username" class="form-control user_name">
+                        </div>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <div class="form-group">
+                            <p for="password" class="form-label">Mot de passe</p>
+                            <input type="text" name="password" class="form-control password" >
+                        </div>
+                    </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
+                <input type="submit" class="btn btn-primary" id="submit_identify" class="submit_identify" value="Soumettre">
+            </div>
+        </div>
+    </div>
+</div>
+
+
 

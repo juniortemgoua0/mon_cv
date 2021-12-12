@@ -74,7 +74,7 @@ class Cursus  {
 
         </div>
 
-       <div class="curcus_main">
+       <div class="curcus_main ">
         <div class="scroll"></div>
         <div class="professional_experience_scroll">
         ' ;

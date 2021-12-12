@@ -8,7 +8,7 @@
  */
 
 :root {
-    --bs-blue: #0d6efd;
+    --bs-blue: #1376ba;
     --bs-indigo: #6610f2;
     --bs-purple: #6f42c1;
     --bs-pink: #d63384;
@@ -30,7 +30,7 @@
     --bs-gray-700: #495057;
     --bs-gray-800: #343a40;
     --bs-gray-900: #212529;
-    --bs-primary: #0d6efd;
+    --bs-primary: #1376ba;
     --bs-secondary: #6c757d;
     --bs-success: #198754;
     --bs-info: #0dcaf0;
@@ -3003,8 +3003,8 @@ fieldset:disabled .btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #0d6efd;
-    border-color: #0d6efd
+    background-color: #1376ba;
+    border-color: #1376ba
 }
 
 .btn-primary:hover {
@@ -3362,14 +3362,14 @@ fieldset:disabled .btn {
 }
 
 .btn-outline-primary {
-    color: #0d6efd;
-    border-color: #0d6efd
+    color: #1376ba;
+    border-color: #1376ba
 }
 
 .btn-outline-primary:hover {
     color: #fff;
-    background-color: #0d6efd;
-    border-color: #0d6efd
+    background-color: #1376ba;
+    border-color: #1376ba
 }
 
 .btn-check:focus+.btn-outline-primary,
@@ -8248,7 +8248,7 @@ fieldset:disabled .btn {
 
 .text-primary {
     --bs-text-opacity: 1;
-    color: rgba(var(--bs-primary-rgb), var(--bs-text-opacity))!important
+    color: #1376ba!important
 }
 
 .text-secondary {

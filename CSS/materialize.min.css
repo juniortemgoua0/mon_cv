@@ -2266,7 +2266,8 @@ svg:not(:root) {
     overflow: hidden
 }
 
-button,
+
+/* button,
 input,
 optgroup,
 select,
@@ -2275,17 +2276,19 @@ textarea {
     font-size: 100%;
     line-height: 1.15;
     margin: 0
-}
+} */
 
-button,
+
+/* button,
 input {
     overflow: visible
-}
+} */
 
-button,
+
+/* button,
 select {
     text-transform: none
-}
+} */
 
 button,
 html [type="button"],
@@ -4270,7 +4273,8 @@ nav .input-field input {
     padding-left: 2rem
 }
 
-nav .input-field input:focus,
+
+/* nav .input-field input:focus,
 nav .input-field input[type=text]:valid,
 nav .input-field input[type=password]:valid,
 nav .input-field input[type=email]:valid,
@@ -4279,7 +4283,7 @@ nav .input-field input[type=date]:valid {
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none
-}
+} */
 
 nav .input-field label {
     top: 0;
@@ -6024,6 +6028,8 @@ label {
     color: #d1d1d1
 }
 
+
+/* 
 input:not([type]),
 input[type=text]:not(.browser-default),
 input[type=password]:not(.browser-default),
@@ -6409,7 +6415,7 @@ textarea.materialize-textarea+label:after,
     opacity: 0;
     -webkit-transition: .2s opacity ease-out, .2s color ease-out;
     transition: .2s opacity ease-out, .2s color ease-out
-}
+} */
 
 .input-field {
     position: relative;

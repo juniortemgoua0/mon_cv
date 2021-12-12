@@ -255,12 +255,13 @@ h2 {
     margin: 0px calc(var(--global-padding));
 }
 
-.active {
+
+/* .active {
     height: 3px;
     width: 100%;
     background-color: red;
     margin-top: var(--global-margin);
-}
+} */
 
 .bar_active {
     display: flex;
@@ -575,17 +576,15 @@ hr {
     .header {
         padding: calc(var(--global-padding)) calc(var(--global-padding));
     }
-    .hobby{
+    .hobby {
         display: flex;
         flex-direction: column;
     }
-
-    .interest_point{
+    .interest_point {
         width: 100%;
         margin-bottom: 20px;
     }
-
-    .language{
+    .language {
         width: 100%;
     }
 }

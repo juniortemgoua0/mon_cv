@@ -88,15 +88,78 @@ $(document).ready(function() {
 
     }
 
+
+    // Click pour le l'edition 
     $(".btn_edit").click((e) => {
-        $(".container").toggleClass("editable")
-        $("#editable_btn").addClass("editable_btn")
+
+        $.ajax({
+                method: "POST",
+                url: "../app/verify_connexion.php",
+                data: {},
+            })
+            .done(function(data) {
+                // verify si l'utilisateur est connecter ou pas 
+                if (data == "connecter") {
+                    //ajoute la class editable si c'est le cas 
+                    $(".container").toggleClass("editable")
+                    $("#editable_btn").addClass("editable_btn")
+                } else if (data == "non connecter") {
+                    // Soumet une alert de demande d'authentification dans le cas contraire 
+                    swal({
+                        title: "Erreur de session",
+                        text: "Veuillez vous authentifier afin de proceder a la modification de vos informations",
+                        icon: "error",
+                        buttons: {
+                            cancel: {
+                                text: "Annuler",
+                                value: null,
+                                visible: true,
+                                closeModal: true,
+                                className: "btn-danger",
+                            },
+                            confirm: {
+                                text: "Continuer",
+                                value: true,
+                                visible: true,
+                                closeModal: true,
+                                className: "btn-primary",
+                            }
+                        },
+                    }).then((isConfirm) => {
+                        if (isConfirm) {
+                            var evt = document.createEvent("MouseEvents");
+                            evt.initMouseEvent("click", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+                            document.getElementById("identify").dispatchEvent(evt);
+                        }
+                    })
+                }
+            });
+    })
+
+    $("#submit_identify").click((e) => {
+        let username = $(".user_name").val()
+        let password = $(".password").val()
+        $.ajax({
+                method: "POST",
+                url: "../app/verify_connexion.php",
+                data: {
+                    username,
+                    password
+                },
+            })
+            .done(function(data) {
+
+            })
+
     })
 
     $(".cancelable_btn").click((e) => {
         $(".container").toggleClass("editable")
         $("#editable_btn").removeClass("editable_btn")
     })
+
+    // ajout du sortable sur la partie edition 
+
 
 });
 

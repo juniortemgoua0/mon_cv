@@ -1,18 +1,16 @@
 <?php 
 
-$host = "localhost:8080" ;
-$dbname = "cv" ;
+$dsn = "mysql: host = localhost ; port= 3307 ; dbname = cv" ;
 $username = "root" ;
-$password = "Berbato7" ;
-
+$password = "Berbeto7" ;
 
 try{
-    $con = new PDO("mysql: host=$host ; dbname=$dbname" , $username , $password) ;
+    $con = new PDO($dsn, $username , $password) ;
     $con->setAttribute(PDO::ATTR_ERRMODE , PDO::ERRMODE_EXCEPTION) ; 
-    die ("CONNEXION REUISSITTE") ;
+    echo "CONNEXION REUISSITTE" ;
     
 }catch(PDOException $e){
-    echo $e ;
+    echo $e->getMessage() ;
 }
 
 
