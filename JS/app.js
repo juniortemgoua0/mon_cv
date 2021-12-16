@@ -160,7 +160,6 @@ $(document).ready(function() {
 
     // ajout du sortable sur la partie edition 
 
-
 });
 
 let menuOpen = document.querySelector(".menu_open");

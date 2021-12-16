@@ -37,8 +37,11 @@ class Experience  {
     }
 
     public function getDateFin() : string
-    {
+    {   if($this->dateFin == "ce jour"){
+        return date("Y-m-d") ;
+        }
         return $this->dateFin ;
+        
     }
 
     public function getDateDebutFormater() : string
@@ -65,9 +68,9 @@ class Experience  {
 
         echo '
         <div class="profession">
-        <p class="title"> '.$this->getPoste().' - <span class="location"> '. $this->getEntreprise().'</span></p>
-        <p class="date">  De '. $this->getDateDebutFormater(). ' a ' . $this->getDateFinFormater(). ' - ' . $this->getLienSite()  . '</p>
-        <p class="subtitle">' . $this->getRealisation() . '</p>
+        <p class="title" > <span class="ExperiencePoste'.$index.'"> '.$this->getPoste().'</span> - <span class="location ExperienceEntreprise'.$index.'"> '. $this->getEntreprise().'</span></p>
+        <p class="date">  De '. $this->getDateDebutFormater(). ' a ' . $this->getDateFinFormater(). ' - <span class="ExperienceLienSite'.$index.'" > ' . $this->getLienSite()  . ' </span></p>
+        <p class="subtitle ExperienceRealisation'.$index.'">' . $this->getRealisation() . '</p>
         ';
          
     if($length > $index){
@@ -101,7 +104,7 @@ class Experience  {
   
 $timeOfWork = Utils::getTimeOfWork($arrayOfInterval ,$arrayOfDate) ;
         echo '
-        <div class="professional_experience card">
+
         <div class="cover_editable_btn"></div>
                 <a href="#" class="editable_btn"><i class="bi bi-pencil-fill"></i> </a>
         <div class="header">
@@ -134,7 +137,6 @@ $timeOfWork = Utils::getTimeOfWork($arrayOfInterval ,$arrayOfDate) ;
         echo ' 
            </div>
           </div>
-        </div>
         ' ; 
         
     }

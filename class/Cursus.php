@@ -15,8 +15,12 @@ class Cursus  {
         return $this->ecoleObtention ;   
     }
 
-    public function getDateObtention(){
+    public function getDateObtentionFormater(){
         return Utils::dateFormat($this->dateObtention) ;
+    }
+
+    public function getDateObtention(){
+        return $this->dateObtention ;
     }
 
     public function getSpecialisation(){
@@ -29,17 +33,17 @@ class Cursus  {
      * @param int $lastValue  qui represente l'index de chaque element du tableau
      * TODO : affiche chaque element en prenant le soin de ne pas mettre de <hr> sur le dernier element 
      */
-    public function getOneElement(int $length , int $lastValue) 
+    public function getOneElement(int $length , int  $index) 
     {
 
      echo '
      <div class="profession">
-     <p class="title">'. $this->getDiplome() .'- <span class="location">'.$this->getEcoleObtention().'</span></p>
-     <p class="date_cursus_role"> <span class="date">' .$this->getDateObtention() .' -
-         </span> &nbsp; <span class="cursus_role">'. $this->getSpecialisation() .'</span> </p>
+     <p class="title"> <span class="CursusDiplome'.$index.'">'. $this->getDiplome() .'</span>- <span class="location CursusEcoleObtention'.$index.'">'.$this->getEcoleObtention().'</span></p>
+     <p class="date_cursus_role"> <span class="date CursusDateObtention'.$index.'">' .$this->getDateObtentionFormater() .' -
+         </span> &nbsp; <span class="cursus_role CursusSpecialisation'.$index.'">'. $this->getSpecialisation() .'</span> </p>
          ';
          
-    if($length > $lastValue){
+    if($length > $index){
         echo '<hr>' ;
     }
 
@@ -53,7 +57,7 @@ class Cursus  {
      *  */ 
     public static function getComponent(array $arrayOfCursus){
         echo '
-        <div class="cursus card">
+       
         <div class="cover_editable_btn"></div>
         <a href="#" class="editable_btn"><i class="bi bi-pencil-fill"></i> </a>
         <div class="header">
@@ -88,7 +92,7 @@ class Cursus  {
         </div>
 
         </div>
-    </div>
+ 
         ';
     }
 

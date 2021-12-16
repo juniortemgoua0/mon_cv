@@ -1,6 +1,7 @@
 <?php
 
 require "utils/Utils.php" ;
+require "utils/Data.php" ;
 require "class/Experience.php" ;
 require "class/Cursus.php" ;
 require "class/Skill.php" ;

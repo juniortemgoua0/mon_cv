@@ -64,7 +64,7 @@ class  Skill {
          </svg></span>
      <div class="details">
          <div class="skill">
-             <p class="skill_name">' .$this->getTitle().'</p>
+             <p class="skill_name CompetenceTitle'.$index.'" >' .$this->getTitle().'</p>
              <span class="star"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                      class="bi bi-star-fill" viewBox="0 0 16 16">
                      <path
@@ -73,8 +73,8 @@ class  Skill {
          </div>
          <p class="lite_gray">'.$this->getStringOfAllSkill().'</p>
          <div class="switcher">
-             <div class="switcher_bar" style="width:'.$this->getLevel().'%;"></div>
-             <span class="switcher_circle" style="right: ' . 100 -$this->getLevel().'%;"></span>
+             <div class="switcher_bar CompetenceLevel'.$index.'" style="width:'.$this->getLevel().'%;"></div>
+             <span class="switcher_circle CompetenceLevel'.$index.'circle " style="right: ' . 100 -$this->getLevel().'%;"></span>
          </div>
      </div>
  
