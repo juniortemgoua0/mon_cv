@@ -1,5 +1,5 @@
 <?php
-
+session_start() ;
 require "utils/Utils.php" ;
 require "utils/Data.php" ;
 require "class/Experience.php" ;

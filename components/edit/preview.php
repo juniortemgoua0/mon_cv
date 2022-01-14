@@ -18,8 +18,16 @@ $componentName = $_POST["componentName"] ;
     ob_end_clean();
     echo $component ;
  }else if($componentName == "Experience"){
+   if(isset($_POST["experienceData"]) && !empty($_POST["experienceData"])){
+      $_SESSION["experienceData"] = array();
+      $p = $_POST["experienceData"] ;
+      foreach( $p as $e){
+        array_push($_SESSION["experienceData"] , new Experience($e["poste"],$e["entreprise"] , $e["datedebut"] , $e["datefin"],$e["liensite"],$e["realisation"]));
+      }
+      //  = $_POST["experienceData"] ;
+   }
     ob_start() ;
-    require "..//Experience.component.php" ;
+    require "../Experience.component.php" ;
     $component = ob_get_contents() ;
     ob_end_clean();
     echo $component ;

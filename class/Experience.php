@@ -67,7 +67,7 @@ class Experience  {
     public function getOneElement(int $length , int $index){
 
         echo '
-        <div class="profession">
+        <div class="profession Experience'.$index.'" >
         <p class="title" > <span class="ExperiencePoste'.$index.'"> '.$this->getPoste().'</span> - <span class="location ExperienceEntreprise'.$index.'"> '. $this->getEntreprise().'</span></p>
         <p class="date">  De '. $this->getDateDebutFormater(). ' a ' . $this->getDateFinFormater(). ' - <span class="ExperienceLienSite'.$index.'" > ' . $this->getLienSite()  . ' </span></p>
         <p class="subtitle ExperienceRealisation'.$index.'">' . $this->getRealisation() . '</p>
