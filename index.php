@@ -1,14 +1,9 @@
 <?php
 require "header.php" ;
 ?>
-
-
 <body>
-        <div class="container ">
-                <a href="#" class="cancelable_btn"><i class="bi bi-plus-lg"></i> </i> </a>
-
+        <div class="container " id="myCanvas">
                 <!--------------------------          SECTION UP_LEFT_SIDE  ------------------------>
-
                 <section class="up_left_side card">
                         <div class="cover_editable_btn"></div>
                         <a href="#" class="editable_btn"><i class="bi bi-pencil-fill"></i> </a>
@@ -39,8 +34,6 @@ require "header.php" ;
                                 <?php require "components/Cursus.component.php"; ?>
                         </div>
                 </section>
-
-
         </div>
 
 </body>

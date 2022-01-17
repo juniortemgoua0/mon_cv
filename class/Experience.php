@@ -19,7 +19,6 @@ class Experience  {
         $this->lienSite = $lienSite ;
         $this->realisation = $realisation ;
     }
-    
 
     public function getPoste() : string
     {
@@ -89,19 +88,15 @@ class Experience  {
         $arrayOfDate = array() ;
 
         foreach($experience as $e){
-            
             $dateFin = $e->getDateFin() ;
             if($dateFin == "ce jour"){
             $dateFin = date("Y-m-d");
             }
             $arrayToDateDebutAndFin = array($e->getDateDebut() , $dateFin) ;
             $implodeDate = implode("/" , $arrayToDateDebutAndFin ) ;
-            array_push($arrayOfDate , $implodeDate) ; 
-
+            array_push($arrayOfDate , $implodeDate) ;
             array_push($arrayOfInterval , Utils::calculEntrepriseExperience($e->getDateDebut(), $e->getDateFin())) ;
-
         }
-  
 $timeOfWork = Utils::getTimeOfWork($arrayOfInterval ,$arrayOfDate) ;
         echo '
 

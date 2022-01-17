@@ -566,7 +566,6 @@
     'imacron' => 278.0,
     128 => 556.0,
   ),
-  'CIDtoGID_Compressed' => true,
-  'CIDtoGID' => 'eJwDAAAAAAE=',
+  'CIDtoGID' => '',
   '_version_' => 6,
 );

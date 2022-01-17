@@ -6,21 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
-    'Symfony\\Component\\Process\\' => array($vendorDir . '/symfony/process'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Svg\\' => array($vendorDir . '/phenx/php-svg-lib/src/Svg'),
-    'Spatie\\TemporaryDirectory\\' => array($vendorDir . '/spatie/temporary-directory/src'),
-    'Spatie\\Image\\' => array($vendorDir . '/spatie/image/src'),
-    'Spatie\\ImageOptimizer\\' => array($vendorDir . '/spatie/image-optimizer/src'),
-    'Spatie\\Browsershot\\' => array($vendorDir . '/spatie/browsershot/src'),
-    'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
-    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src', $vendorDir . '/psr/http-factory/src'),
+    'Sabberworm\\CSS\\' => array($vendorDir . '/sabberworm/php-css-parser/src'),
     'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
-    'League\\MimeTypeDetection\\' => array($vendorDir . '/league/mime-type-detection/src'),
-    'League\\Glide\\' => array($vendorDir . '/league/glide/src'),
-    'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
-    'Intervention\\Image\\' => array($vendorDir . '/intervention/image/src/Intervention/Image'),
-    'GuzzleHttp\\Psr7\\' => array($vendorDir . '/guzzlehttp/psr7/src'),
     'FontLib\\' => array($vendorDir . '/phenx/php-font-lib/src/FontLib'),
     'Dompdf\\' => array($vendorDir . '/dompdf/dompdf/src'),
 );

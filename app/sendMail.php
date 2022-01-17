@@ -19,7 +19,7 @@ try {
     $mail->SMTPAuth   = true;                                 
     $mail->Username   = 'juniortemgoua0@gmail.com';                   
     $mail->Password   = 'Berbato7';                             
-    $mail->SMTPSecure = "ssl";            
+    $mail->SMTPSecure = "ssl";
     $mail->Port       = 465;    
 
     $mail->setFrom("juniortemgoua0@gmail.com", 'Junior');
@@ -43,5 +43,4 @@ try {
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
-
 ?> 

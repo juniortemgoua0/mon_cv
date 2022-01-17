@@ -7,40 +7,19 @@ namespace Composer\Autoload;
 class ComposerStaticInitca6663521bc4941e6bf59c920887088d
 {
     public static $files = array (
-        'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
-            'Symfony\\Polyfill\\Php80\\' => 23,
-            'Symfony\\Component\\Process\\' => 26,
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Svg\\' => 4,
-            'Spatie\\TemporaryDirectory\\' => 26,
-            'Spatie\\Image\\' => 13,
-            'Spatie\\ImageOptimizer\\' => 22,
-            'Spatie\\Browsershot\\' => 19,
+            'Sabberworm\\CSS\\' => 15,
         ),
         'P' => 
         array (
-            'Psr\\Log\\' => 8,
-            'Psr\\Http\\Message\\' => 17,
             'PHPMailer\\PHPMailer\\' => 20,
-        ),
-        'L' => 
-        array (
-            'League\\MimeTypeDetection\\' => 25,
-            'League\\Glide\\' => 13,
-            'League\\Flysystem\\' => 17,
-        ),
-        'I' => 
-        array (
-            'Intervention\\Image\\' => 19,
-        ),
-        'G' => 
-        array (
-            'GuzzleHttp\\Psr7\\' => 16,
         ),
         'F' => 
         array (
@@ -53,66 +32,21 @@ class ComposerStaticInitca6663521bc4941e6bf59c920887088d
     );
 
     public static $prefixDirsPsr4 = array (
-        'Symfony\\Polyfill\\Php80\\' => 
+        'Symfony\\Polyfill\\Mbstring\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
-        ),
-        'Symfony\\Component\\Process\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/process',
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
         ),
         'Svg\\' => 
         array (
             0 => __DIR__ . '/..' . '/phenx/php-svg-lib/src/Svg',
         ),
-        'Spatie\\TemporaryDirectory\\' => 
+        'Sabberworm\\CSS\\' => 
         array (
-            0 => __DIR__ . '/..' . '/spatie/temporary-directory/src',
-        ),
-        'Spatie\\Image\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/spatie/image/src',
-        ),
-        'Spatie\\ImageOptimizer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/spatie/image-optimizer/src',
-        ),
-        'Spatie\\Browsershot\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/spatie/browsershot/src',
-        ),
-        'Psr\\Log\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/log/src',
-        ),
-        'Psr\\Http\\Message\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/src',
         ),
         'PHPMailer\\PHPMailer\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpmailer/phpmailer/src',
-        ),
-        'League\\MimeTypeDetection\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/league/mime-type-detection/src',
-        ),
-        'League\\Glide\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/league/glide/src',
-        ),
-        'League\\Flysystem\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/league/flysystem/src',
-        ),
-        'Intervention\\Image\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
-        ),
-        'GuzzleHttp\\Psr7\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
         ),
         'FontLib\\' => 
         array (
@@ -124,18 +58,7 @@ class ComposerStaticInitca6663521bc4941e6bf59c920887088d
         ),
     );
 
-    public static $prefixesPsr0 = array (
-        'S' => 
-        array (
-            'Sabberworm\\CSS' => 
-            array (
-                0 => __DIR__ . '/..' . '/sabberworm/php-css-parser/lib',
-            ),
-        ),
-    );
-
     public static $classMap = array (
-        'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'HTML5_Data' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Data.php',
@@ -143,9 +66,6 @@ class ComposerStaticInitca6663521bc4941e6bf59c920887088d
         'HTML5_Parser' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Parser.php',
         'HTML5_Tokenizer' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Tokenizer.php',
         'HTML5_TreeBuilder' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/TreeBuilder.php',
-        'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
-        'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
-        'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -153,7 +73,6 @@ class ComposerStaticInitca6663521bc4941e6bf59c920887088d
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitca6663521bc4941e6bf59c920887088d::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitca6663521bc4941e6bf59c920887088d::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitca6663521bc4941e6bf59c920887088d::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitca6663521bc4941e6bf59c920887088d::$classMap;
 
         }, null, ClassLoader::class);

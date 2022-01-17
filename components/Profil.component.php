@@ -35,12 +35,14 @@
 
 <div class="personnal_info">
 
-    <menu class="">
+    <menu class="menu">
         <a href="#" class="action"> <i class="bi bi-pencil-fill btn_edit"></i> </a>
         <a href="../app/downloadPdf.php" class="action btn_download"> <i class="bi bi-save-fill"></i> </a>
         <a href="#" class="action btn_share" id="btn_share" data-bs-toggle="modal"
             data-bs-target="#exampleModalshare_cv"> <i class="bi bi-share-fill"></i> </a>
-        <a href="#" class="trigger"> <i class="bi bi-plus-lg"></i> </a>
+        <a href="#" class="trigger"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z"/>
+            </svg> </a>
     </menu>
 
     <div class="personnal_info_group">
@@ -120,7 +122,16 @@ echo '
             <div class="load_none ">
                 <div class="load_page_content">
                     <div class="spinner-border" role="status">
-                        <span class="visually-hidden">Loading...</span>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  -------------      <span class="visually-hidden">Loading...</span>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 class  Skill {
 
@@ -11,17 +11,17 @@ class  Skill {
         return $this->idOfSkill ;
     }
 
-    public function getTitle() : string 
+    public function getTitle() : string
     {
         return $this->title;
     }
 
     /**
-     * Retourne les titres de toutes les sous-competence liees a une competence sous forme de 
-     * chaine de caractere 
+     * Retourne les titres de toutes les sous-competence liees a une competence sous forme de
+     * chaine de caractere
      */
-    public function getStringOfAllSkill() : string 
-    {   
+    public function getStringOfAllSkill() : string
+    {
         $stringOfAllSkill = $this->allSkill[0]->getTitle() ;
         if($this->allSkill != null){
 
@@ -34,7 +34,7 @@ class  Skill {
     }
 
     /**
-     * Retourne toutes les sous-competences liees a une competence sous forme de tableau 
+     * Retourne toutes les sous-competences liees a une competence sous forme de tableau
      */
     public function getAllSkill() : array
     {
@@ -51,8 +51,8 @@ class  Skill {
 
     /**
      * @param $index {int} qui fait reference a l'index de l'element dans le tableau de competence
-     *  */ 
-    public function getOneElement(int $index) 
+     *  */
+    public function getOneElement(int $index)
     {
 
      echo '
@@ -90,7 +90,7 @@ class  Skill {
                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
              </div>
              <div class="modal-body"> ' ;
- 
+
                  foreach($this->getAllSkill() as $a){
                  echo '
                  <div class="d_personnal" id="" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -114,7 +114,7 @@ class  Skill {
  
                  ' ;
                  }
- 
+
                  echo '
              </div>
  
@@ -124,12 +124,12 @@ class  Skill {
  ' ;
     }
 
-    public static function getComponent($arrayOfSkill){
-       
+    public static function getComponent( $arrayOfSkill){
+
         for ($i=0 ; $i < count($arrayOfSkill) ; $i++){
             $arrayOfSkill[$i]->getOneElement($i , ) ;
-        } 
-       
+        }
+
     }
 }
 

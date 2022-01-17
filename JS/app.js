@@ -20,8 +20,8 @@ $(document).ready(function() {
         e.currentTarget.parentElement.classList.toggle("open")
     })
 
-    var elems = document.querySelectorAll('.chips');
-    var options = {
+    let elems = document.querySelectorAll('.chips');
+    let options = {
         placeholder: 'yo@gmail.com ',
         secondaryPlaceholder: '+Email',
         data: [],
@@ -32,13 +32,12 @@ $(document).ready(function() {
         minLeingth: 1
     };
 
-    var instances = M.Chips.init(elems, options);
-
+    let instances = M.Chips.init(elems, options);
 
 
     $(".send_mail").click((e) => {
-        var recipients = instances[0].chipsData
-        var object = $(".object_mail").val();
+        let recipients = instances[0].chipsData
+        let object = $(".object_mail").val();
 
         $.ajax({
                 method: "POST",
@@ -63,6 +62,7 @@ $(document).ready(function() {
                     verifyData("alert-danger", "Erreur de conexion au server ! Verifier votre connexion")
                 else if (data.includes("Undefined array key"))
                     verifyData("alert-danger", "Veuillez entrer au moins une adresse email")
+                else verifyData("alert-danger" , "Une erreur est survenu lors de l'envoi du mail")
             });
 
 
@@ -158,9 +158,38 @@ $(document).ready(function() {
         $("#editable_btn").removeClass("editable_btn")
     })
 
-    // ajout du sortable sur la partie edition 
+    // ajout du sortable sur la partie edition
+
+    $('.btn_download').click((e)=>{
+        e.preventDefault()
+        $(".menu").removeClass("open")
+        ExportPdf()
+    })
+
+    function ExportPdf(){
+        kendo.drawing
+            .drawDOM("#myCanvas")
+            .then(function(group) {
+                // Render the result as a PDF file
+                return kendo.drawing.exportPDF(group, {
+                    paperSize: "auto",
+                    margin: { left: "1cm", top: "1cm", right: "1cm", bottom: "1cm" }
+                });
+            })
+            .done(function(data) {
+                // Save the PDF file
+                console.log(typeof data)
+                kendo.saveAs({
+                    dataURI: data,
+                    fileName: "document.pdf",
+                    proxyURL: "https://demos.telerik.com/kendo-ui/service/export"
+                });
+            });
+    }
 
 });
+
+
 
 let menuOpen = document.querySelector(".menu_open");
 

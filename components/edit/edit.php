@@ -1,5 +1,5 @@
 <?php
-require "../../header.php"
+require dirname(dirname(__DIR__))."/header.php"
 ?>
 
 <!DOCTYPE html>
@@ -94,19 +94,19 @@ require "../../header.php"
 
                         <!------------------ SECTION PROFIL      ------------------------------->
 
-                        <?php require "edit_profil.php" ?>
+                        <?php require dirname(dirname(__DIR__))."/components/edit/edit_profil.php" ?>
 
                         <!------------------- SECTION EXPERIENCE -------------------------------->
 
-                        <?php require "edit_experience.php" ?>
+                        <?php require dirname(dirname(__DIR__))."/components/edit/edit_experience.php" ?>
 
                         <!---------------------  SECTION CURSUS  -------------------------------->
 
-                        <?php require "edit_cursus.php" ?>
+                        <?php require dirname(dirname(__DIR__))."/components/edit/edit_cursus.php" ?>
 
                         <!-------------------- SECTION COMPETENCE   ------------------------------>
 
-                        <?php require "edit_competence.php" ?>
+                        <?php require dirname(dirname(__DIR__))."/components/edit/edit_competence.php" ?>
 
                     </div>
                 </div>
