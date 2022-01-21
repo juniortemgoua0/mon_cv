@@ -57,20 +57,19 @@ class Cursus  {
      *  */ 
     public static function getComponent(array $arrayOfCursus){
         echo '
-       
         <div class="cover_editable_btn"></div>
         <a href="#" class="editable_btn"><i class="bi bi-pencil-fill"></i> </a>
         <div class="header">
           <div class="header_information">
             <img src="img/casquette-noire-pour-etudiant-diplome.png" alt="">
             <div class="header_info">
-                <h3 class="header_title">Cursus academique</h3>
+                <h2 class="header_title">Cursus academique</h2>
                 <p class="header_subtitle lite_gray">Diplomes et formations
                     certifiantes</p>
             </div>
         </div>
 
-        <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white"
                 class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
                 <path
                     d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />

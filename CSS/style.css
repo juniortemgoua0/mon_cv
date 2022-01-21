@@ -138,7 +138,7 @@ h2 {
     margin-top: var(--global-margin);
     margin-bottom: calc(var(--global-padding)*0.5);
     display: grid;
-    grid-template-columns: 42% 56%;
+    grid-template-columns: 40% 58%;
     grid-template-rows: 700px auto;
     background-color: var(--background-color);
     /* grid-template-areas: ; */
@@ -150,10 +150,12 @@ h2 {
 .details .p_lite_gray {
     font-weight: 100;
     color: #e9e9e9;
+    opacity: 0.7;
 }
 
 .p_lite_gray {
     color: #e9e9e9;
+    opacity: 0.7;
 }
 
 .card {
@@ -161,6 +163,7 @@ h2 {
     box-shadow: 0px 0px 5px #ccc;
     overflow: hidden;
     background-color: white;
+    margin: 0px;
 }
 
 
@@ -174,12 +177,15 @@ h2 {
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
+    max-height: 1100px;
+    display: flex;
+    flex-direction: column;
 }
 
 .user_profil {
     height: 400px;
     position: relative;
-    background-image: url("../img/cover.jpg");
+    background-image: url("../img/cover-min.jpg");
     background-size: cover;
 }
 
@@ -193,6 +199,10 @@ h2 {
     right: 5%;
     color: white;
     z-index: 2;
+}
+
+.user_info .user_name h2{
+    line-height: 1;
 }
 
 .user_picture {
@@ -311,15 +321,17 @@ menu>.trigger {
     transition: box-shadow 250ms ease-in-out, color 250ms ease-in-out;
 }
 
-menu>.trigger i {
+menu>.trigger svg {
     /* width: calc(1.6 * var(--size));
     height: calc(1.6*var(--size)); */
     font-size: 32px;
+    width: 32px;
+    height: 32px;
     color: white;
     transition: transform 250ms ease-in-out;
 }
 
-menu.open>.trigger i {
+menu.open>.trigger svg {
     transform: rotate(-135deg);
 }
 
@@ -409,6 +421,8 @@ menu.open>.trigger i {
     color: white;
     position: relative;
     padding-top: var(--global-margin);
+    /*height: 100%;*/
+    flex: 1;
 }
 
 .personnal_info_group {
@@ -416,7 +430,7 @@ menu.open>.trigger i {
 }
 
 .personnal_info_group p {
-    font-weight: 600;
+    /*font-weight: 600;*/
     margin-bottom: var(--global-margin-b);
 }
 
@@ -440,6 +454,7 @@ menu.open>.trigger i {
     width: 40px;
     height: 40px;
     margin-right: 20px;
+    color: white;
 }
 
 .personnal img {
@@ -452,19 +467,27 @@ menu.open>.trigger i {
     word-break: break-word;
 }
 
+.profil_footer{
+    /*position: absolute;*/
+    /*bottom: 0px;*/
+    width: 100%;
+    margin-top: 20px;
+}
+
 .experience_indication {
     display: flex;
     justify-content: space-between;
     margin: 0px calc(var(--global-padding));
+    font-weight: bold;
 }
 
 
-/* .active {
+.activ {
     height: 3px;
     width: 100%;
     background-color: red;
     margin-top: var(--global-margin);
-} */
+}
 
 .bar_active {
     display: flex;
@@ -490,7 +513,7 @@ menu.open>.trigger i {
     grid-column-start: 1;
     grid-column-end: 2;
     grid-row-start: 3;
-    /*grid-row-end: 200;*/
+    grid-row-end: 200;
 }
 
 .d_personnal {
@@ -530,6 +553,7 @@ menu.open>.trigger i {
     position: absolute;
     top: calc(50% - 10px);
     left: calc(50% - 10px);
+    color: white;
 }
 
 .skill {
@@ -548,7 +572,7 @@ menu.open>.trigger i {
 }
 
 .details p {
-    margin-bottom: var(--global-margin-b);
+    margin-bottom: calc(var(--global-margin-b)*0);
 }
 
 .switcher {
@@ -589,13 +613,13 @@ menu.open>.trigger i {
 }
 
 .professional_experience {
-    margin-bottom: calc(var(--global-margin)*2);
+    margin-bottom: calc(var(--global-margin)*1.5);
     background-color: white;
 }
 
 .header {
     background-color: var(--primary-color);
-    padding: calc(var(--global-padding)) calc(var(--global-padding)*1.5);
+    padding: calc(var(--global-padding) - 5px) calc(var(--global-padding)*1.5);
     display: flex;
     justify-content: space-between;
     /* flex-wrap: wrap; */
@@ -603,9 +627,21 @@ menu.open>.trigger i {
     color: white;
 }
 
+.header h3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.header svg{
+    opacity: 0.7;
+}
+
 .header_subtitle {
     font-style: italic;
     font-weight: 100;
+    margin-bottom: 0px;
+    opacity: 0.7;
 }
 
 .header_information {
@@ -616,7 +652,8 @@ menu.open>.trigger i {
 }
 
 .header_information svg {
-    /* margin-right: 5%; */
+
+    color: white;
 }
 
 .header_information img {
@@ -636,7 +673,7 @@ menu.open>.trigger i {
 
 .professional_experience_scroll {
     overflow-y: scroll;
-    height: 500px;
+    height: 550px;
     position: relative;
     top: 0px;
     bottom: 0px;
@@ -676,8 +713,12 @@ menu.open>.trigger i {
 }
 
 .title {
-    margin-bottom: var(--global-margin-b);
-    font-size: 20px;
+    margin-bottom: calc(var(--global-margin-b)*.5);
+    font-size: 18px;
+}
+
+.title > span {
+    font-weight: 500;
 }
 
 .title .location {
@@ -686,25 +727,27 @@ menu.open>.trigger i {
 
 .date {
     color: var(--primary-color);
-    margin-bottom: calc(var(--global-margin-b)*0.5);
-    font-size: 18px;
+    /*margin-bottom: calc(var(--global-margin-b)*0.5);*/
+    font-size: 17px;
 }
 
 .subtitle {
     margin-bottom: calc(var(--global-margin-b)*0.5);
     font-weight: 100;
+    opacity: 0.8;
+    font-size: 17px;
     color: #3e3e3e;
 }
 
 hr {
     color: #fff;
-    margin-bottom: var(--global-margin);
+    margin-bottom: calc(var(--global-margin)*.7);
 }
 
 .hobby {
     display: flex;
     justify-content: space-between;
-    margin-bottom: calc(var(--global-margin)*2);
+    margin-bottom: calc(var(--global-margin)*1.5);
 }
 
 .logo_hobby {
@@ -720,18 +763,20 @@ hr {
 }
 
 .interest_point {
-    padding: calc(var(--global-padding)) calc(var(--global-padding)*1.5);
+    padding: calc(var(--global-padding)*.5) calc(var(--global-padding)*1.5);
     margin-right: 5%;
     width: 60%;
 }
 
 .language {
-    padding: calc(var(--global-padding)) calc(var(--global-padding)*1.5);
+    padding: calc(var(--global-padding)*.5) calc(var(--global-padding)*1.5);
     width: 35%;
 }
-
+.contain_lang_check{
+    margin-top: 20px;
+}
 .language_check {
-    margin-top: calc(var(--global-margin)*2);
+    margin-bottom: calc(var(--global-margin));
     display: flex;
     align-items: center;
 }
@@ -757,7 +802,7 @@ hr {
 }
 
 hr {
-    color: #dddddd;
+    color: #000;
     /* background-color: #ff4f4f; */
 }
 
@@ -816,6 +861,10 @@ hr {
     z-index: 15;
 }
 
+.choose_format{
+    box-shadow: 0px 0px 10px var(--primary-color);
+    border-radius: 5px;
+}
 
 /*
 *                 MEDIA QUERY
@@ -864,7 +913,7 @@ hr {
         padding-right: calc(var(--global-padding)*0.4);
     }
     .header {
-        padding: calc(var(--global-padding)) calc(var(--global-padding));
+        /*padding: calc(var(--global-padding) - 20px) calc(var(--global-padding));*/
     }
     .hobby {
         display: flex;
